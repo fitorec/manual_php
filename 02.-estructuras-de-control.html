@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Estructuras de Control</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///usr/local/lib/python2.6/dist-packages/landslide-0.8.2-py2.6.egg/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///usr/local/lib/python2.6/dist-packages/landslide-0.8.2-py2.6.egg/landslide/themes/default/css/screen.css">
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///usr/local/lib/python2.6/dist-packages/landslide-0.8.2-py2.6.egg/landslide/themes/default/js/slides.js"></script>
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div class="presentation">
+    <div class="slides">
+      
+      <!-- slide source: 02.-estructuras-de-control.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Estructuras de Control</h1></header>
+            
+            
+            <section><ul>
+<li>Operadores condicionales.</li>
+<li>Condicionales.</li>
+<li>Ciclos de control.</li>
+</ul>
+<h1>Operadores condicionales.</h1>
+<pre><code>==  Igual
+=== Identidad
+!=  Diferente
+!== Alguna diferencia.
+ &gt;  Mayor que.
+ &gt;  Menor que.
+&gt;=  Mayor igual que.
+&lt;=  Menor igual que.
+</code></pre></section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/02.-estructuras-de-control.md">02.-estructuras-de-control.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 02.-estructuras-de-control.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>condicionales:</h1></header>
+            
+            
+            <section><h2>if, else</h2>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?php</span>
+<span class="lineno">2</span>     <span class="k">if</span><span class="p">(</span><span class="nx">condicion</span><span class="p">){</span>
+<span class="lineno">3</span>         <span class="c1">#bloque de código ejecutado si la condición es cierta</span>
+<span class="lineno">4</span>     <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="lineno">5</span>         <span class="c1">#bloque de código ejecutado si la condición es falsa</span>
+<span class="lineno">6</span>     <span class="p">}</span>
+<span class="lineno">7</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<h2>elseif</h2>
+<p>Uso del <strong>elseif()</strong>, lo podemos usar cuando existe múltiples condiciones:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="cp">&lt;?php</span>
+<span class="lineno"> 2</span>     <span class="k">if</span><span class="p">(</span><span class="nx">condicion1</span><span class="p">){</span>
+<span class="lineno"> 3</span>         <span class="c1">#bloque de código ejecutado si la condición es cierta</span>
+<span class="lineno"> 4</span>     <span class="p">}</span><span class="k">elseif</span><span class="p">(</span><span class="nx">condicion2</span><span class="p">){</span>
+<span class="lineno"> 5</span>         <span class="c1">#bloque de código ejecutado si la condición2 es cierta</span>
+<span class="lineno"> 6</span>     <span class="p">}</span><span class="k">elseif</span><span class="p">(</span><span class="nx">condicion3</span><span class="p">){</span>
+<span class="lineno"> 7</span>         <span class="c1">#bloque de código ejecutado si la condición3 es cierta</span>
+<span class="lineno"> 8</span>     <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="lineno"> 9</span>         <span class="c1">#bloque de código ejecutado si ninguna condición es cierta</span>
+<span class="lineno">10</span>     <span class="p">}</span>
+<span class="lineno">11</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/02.-estructuras-de-control.md">02.-estructuras-de-control.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 02.-estructuras-de-control.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>condicionales:</h1></header>
+            
+            
+            <section><h2>switch</h2>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="cp">&lt;?php</span>
+<span class="lineno"> 2</span>     <span class="k">switch</span><span class="p">(</span><span class="nv">$variable</span><span class="p">){</span>
+<span class="lineno"> 3</span>         <span class="k">case</span><span class="p">(</span><span class="nx">valor_1</span><span class="p">)</span><span class="o">:</span>
+<span class="lineno"> 4</span>             <span class="c1">//bloque de código ejecutado si $variable conside con valor_1</span>
+<span class="lineno"> 5</span>             <span class="k">break</span><span class="p">;</span>
+<span class="lineno"> 6</span>         <span class="k">case</span><span class="p">(</span><span class="nx">valor_2</span><span class="p">)</span><span class="o">:</span>
+<span class="lineno"> 7</span>             <span class="c1">//bloque de código ejecutado si $variable conside con valor_2</span>
+<span class="lineno"> 8</span>             <span class="k">break</span><span class="p">;</span>
+<span class="lineno"> 9</span>         <span class="k">default</span><span class="o">:</span>
+<span class="lineno">10</span>             <span class="c1">//codigo por defecto</span>
+<span class="lineno">11</span>     <span class="p">}</span>
+<span class="lineno">12</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/02.-estructuras-de-control.md">02.-estructuras-de-control.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 02.-estructuras-de-control.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Ciclos de control.</h1></header>
+            
+            
+            <section><h2>foreach</h2>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="cp">&lt;?php</span>
+<span class="lineno"> 2</span> <span class="nv">$mi_arreglo</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span> 
+<span class="lineno"> 3</span>     <span class="s1">&#39;c1&#39;</span> <span class="o">=&gt;</span><span class="s1">&#39;valor1&#39;</span><span class="p">,</span>
+<span class="lineno"> 4</span>     <span class="s1">&#39;c2&#39;</span> <span class="o">=&gt;</span><span class="s1">&#39;valor2&#39;</span><span class="p">,</span>
+<span class="lineno"> 5</span>     <span class="s1">&#39;c3&#39;</span> <span class="o">=&gt;</span><span class="s1">&#39;valor3&#39;</span>
+<span class="lineno"> 6</span> <span class="p">);</span>
+<span class="lineno"> 7</span> <span class="k">foreach</span><span class="p">(</span><span class="nv">$mi_arreglo</span> <span class="k">as</span> <span class="nv">$clave</span><span class="o">=&gt;</span><span class="nv">$valor</span><span class="p">)</span><span class="o">:</span>
+<span class="lineno"> 8</span>     <span class="k">echo</span> <span class="s1">&#39;$mi_arreglo[&#39;</span><span class="o">.</span><span class="nv">$clave</span><span class="o">.</span><span class="s1">&#39;] = &#39;</span><span class="o">.</span><span class="nv">$valor</span><span class="p">;</span>
+<span class="lineno"> 9</span> <span class="k">endforeach</span><span class="p">;</span>
+<span class="lineno">10</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<h2>while</h2>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="cp">&lt;?php</span>
+<span class="lineno"> 2</span> <span class="nv">$mi_arreglo</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span> 
+<span class="lineno"> 3</span>     <span class="s1">&#39;c1&#39;</span> <span class="o">=&gt;</span><span class="s1">&#39;valor1&#39;</span><span class="p">,</span>
+<span class="lineno"> 4</span>     <span class="s1">&#39;c2&#39;</span> <span class="o">=&gt;</span><span class="s1">&#39;valor2&#39;</span><span class="p">,</span>
+<span class="lineno"> 5</span>     <span class="s1">&#39;c3&#39;</span> <span class="o">=&gt;</span><span class="s1">&#39;valor3&#39;</span>
+<span class="lineno"> 6</span> <span class="p">);</span>
+<span class="lineno"> 7</span> <span class="k">while</span><span class="p">(</span><span class="nb">key</span><span class="p">(</span><span class="nv">$mi_arreglo</span><span class="p">)){</span>
+<span class="lineno"> 8</span>     <span class="k">echo</span> <span class="s1">&#39;$mi_arreglo[&#39;</span><span class="o">.</span><span class="nb">key</span><span class="p">(</span><span class="nv">$mi_arreglo</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39;] = &#39;</span><span class="o">.</span><span class="nv">$mi_arreglo</span><span class="p">[</span><span class="nb">key</span><span class="p">(</span><span class="nv">$mi_arreglo</span><span class="p">)];</span>
+<span class="lineno"> 9</span>     <span class="nb">next</span><span class="p">(</span><span class="nv">$mi_arreglo</span><span class="p">);</span>
+<span class="lineno">10</span> <span class="p">}</span>
+<span class="lineno">11</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/02.-estructuras-de-control.md">02.-estructuras-de-control.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 02.-estructuras-de-control.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Ciclos de control.</h1></header>
+            
+            
+            <section><h2>do while</h2>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?php</span>
+<span class="lineno">2</span>     <span class="nv">$i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span>
+<span class="lineno">3</span>     <span class="k">do</span><span class="p">{</span>
+<span class="lineno">4</span>         <span class="k">echo</span> <span class="nv">$i</span><span class="p">;</span>
+<span class="lineno">5</span>     <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="nv">$i</span><span class="o">&lt;</span><span class="m">10</span><span class="p">);</span>
+<span class="lineno">6</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<h2>for</h2>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?php</span>
+<span class="lineno">2</span> <span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="m">10</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">){</span>
+<span class="lineno">3</span>     <span class="k">echo</span> <span class="nv">$i</span><span class="p">;</span>
+<span class="lineno">4</span> <span class="p">}</span>
+<span class="lineno">5</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/02.-estructuras-de-control.md">02.-estructuras-de-control.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 02.-estructuras-de-control.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Interrupsupciones y saltos.</h1></header>
+            
+            
+            <section><h2>continue</h2>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?php</span>
+<span class="lineno">2</span> <span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="m">10</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">){</span>
+<span class="lineno">3</span>     <span class="k">for</span><span class="p">(</span><span class="nv">$j</span><span class="o">=</span><span class="m">0</span><span class="p">;</span> <span class="nv">$j</span><span class="o">&lt;</span><span class="m">5</span><span class="p">;</span> <span class="nv">$j</span><span class="o">++</span><span class="p">){</span>
+<span class="lineno">4</span>         <span class="k">if</span><span class="p">(</span><span class="nv">$j</span><span class="o">%</span><span class="m">2</span> <span class="o">!=</span> <span class="m">0</span><span class="p">)</span>
+<span class="lineno">5</span>             <span class="k">continue</span> <span class="m">2</span><span class="p">;</span>
+<span class="lineno">6</span>         <span class="k">echo</span> <span class="nv">$i</span><span class="o">.</span><span class="s1">&#39;---&#39;</span><span class="o">.</span><span class="nv">$j</span><span class="o">.</span><span class="s2">&quot;&lt;br&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="lineno">7</span>     <span class="p">}</span>
+<span class="lineno">8</span> <span class="p">}</span>
+<span class="lineno">9</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<h2>break</h2>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="cp">&lt;?php</span>
+<span class="lineno"> 2</span> <span class="nv">$i</span><span class="o">=</span><span class="m">1</span><span class="p">;</span>
+<span class="lineno"> 3</span> <span class="nv">$j</span><span class="o">=</span><span class="m">1</span><span class="p">;</span>
+<span class="lineno"> 4</span> <span class="k">for</span><span class="p">(;</span> <span class="nv">$i</span><span class="o">&lt;</span><span class="m">100</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">){</span>
+<span class="lineno"> 5</span>     <span class="k">for</span><span class="p">(;</span> <span class="nv">$j</span><span class="o">&lt;</span><span class="m">100</span><span class="p">;</span> <span class="nv">$j</span><span class="o">++</span><span class="p">){</span>
+<span class="lineno"> 6</span>         <span class="k">if</span><span class="p">(</span><span class="nv">$j</span><span class="o">/</span><span class="m">2</span> <span class="o">==</span> <span class="nv">$i</span><span class="p">)</span>
+<span class="lineno"> 7</span>             <span class="k">break</span> <span class="m">2</span><span class="p">;</span>
+<span class="lineno"> 8</span>     <span class="p">}</span>
+<span class="lineno"> 9</span> <span class="p">}</span>
+<span class="lineno">10</span> <span class="k">echo</span> <span class="nv">$i</span><span class="o">.</span><span class="s1">&#39;---&#39;</span><span class="o">.</span><span class="nv">$j</span><span class="o">.</span><span class="s2">&quot;&lt;br&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="lineno">11</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/02.-estructuras-de-control.md">02.-estructuras-de-control.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/6
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Tabla de Contenidos</h2>
+    <table>
+      <caption>Tabla de Contenidos</caption>
+            
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Estructuras de Control</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+            
+      <tr id="toc-row-2">
+        <th><a href="#slide2">condicionales:</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+            
+      <tr id="toc-row-3">
+        <th><a href="#slide3">condicionales:</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+            
+      <tr id="toc-row-4">
+        <th><a href="#slide4">Ciclos de control.</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+            
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Ciclos de control.</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+            
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Interrupsupciones y saltos.</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Ayuda</h2>
+    <table>
+      <caption>Ayuda</caption>
+      <tr>
+        <th>Tabla de Contenidos</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Vista Minuatura</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Archivo fuente</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Ver num. Página</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Notas</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Ayuda</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>

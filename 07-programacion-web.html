@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Programación en la web.</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///usr/local/lib/python2.6/dist-packages/landslide-0.8.2-py2.6.egg/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///usr/local/lib/python2.6/dist-packages/landslide-0.8.2-py2.6.egg/landslide/themes/default/css/screen.css">
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///usr/local/lib/python2.6/dist-packages/landslide-0.8.2-py2.6.egg/landslide/themes/default/js/slides.js"></script>
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div class="presentation">
+    <div class="slides">
+      
+      <!-- slide source: 07-programacion-web.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Programación en la web.</h1></header>
+            
+            
+            <section><h2>capitulo 7</h2>
+<ul>
+<li>Formularios.</li>
+<li>Cabeceras http.</li>
+<li>Cookies.</li>
+<li>Sesiones.</li>
+</ul></section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/07-programacion-web.md">07-programacion-web.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/4
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 07-programacion-web.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Cabeceras http</h1></header>
+            
+            
+            <section><h2>Redicción:</h2>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?</span> <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;location: http://www.nueva-url.com&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<h2>Compresión salida:</h2>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?</span> <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;ob_gzhandler&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<h2>Control cache:</h2>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?</span>
+<span class="lineno">2</span> <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Cache-control: no-cache, must-revalidate&#39;</span><span class="p">);</span>
+<span class="lineno">3</span> <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;expires: tue, 16 Nov 2011 00:00:00 GMT&#39;</span><span class="p">);</span>
+<span class="lineno">4</span>  <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<h2>Control cache:</h2>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?</span>
+<span class="lineno">2</span> <span class="nv">$fecha_expirado</span> <span class="o">=</span> <span class="nb">gmdate</span><span class="p">(</span><span class="s1">&#39;D, j M Y H:i:s&#39;</span><span class="p">,</span><span class="nb">time</span><span class="p">()</span><span class="o">+</span><span class="m">2592000</span><span class="p">);</span>
+<span class="lineno">3</span> <span class="c1">//2592000segundos=30días</span>
+<span class="lineno">4</span> <span class="nb">header</span><span class="p">(</span><span class="s2">&quot;expires: </span><span class="si">{</span><span class="nv">$fecha_expirado</span><span class="si">}</span><span class="s2"> GMT&quot;</span><span class="p">);</span>
+<span class="lineno">5</span> <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;Cache-control: public&#39;</span><span class="p">);</span>
+<span class="lineno">6</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/07-programacion-web.md">07-programacion-web.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/4
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 07-programacion-web.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Cookies</h1></header>
+            
+            
+            <section><h2>Creación:</h2>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="cp">&lt;?</span>
+<span class="lineno"> 2</span> <span class="nb">setcookie</span><span class="p">(</span><span class="s1">&#39;nombreCookie&#39;</span><span class="p">,</span><span class="s1">&#39;valor cookie&#39;</span><span class="p">);</span>
+<span class="lineno"> 3</span> <span class="c1">#definiendo la fecha de expiración</span>
+<span class="lineno"> 4</span> <span class="nb">setcookie</span><span class="p">(</span><span class="s1">&#39;nombreCookie&#39;</span><span class="p">,</span><span class="s1">&#39;valor cookie&#39;</span><span class="p">,</span><span class="nb">time</span><span class="p">()</span><span class="o">+</span><span class="m">3600</span><span class="p">);</span>
+<span class="lineno"> 5</span> <span class="c1">#definiendo la ruta</span>
+<span class="lineno"> 6</span> <span class="nb">setcookie</span><span class="p">(</span><span class="s1">&#39;nombreCookie&#39;</span><span class="p">,</span><span class="s1">&#39;valor cookie&#39;</span><span class="p">,</span><span class="nb">time</span><span class="p">()</span><span class="o">+</span><span class="m">3600</span><span class="p">,</span><span class="s1">&#39;/ruta/&#39;</span><span class="p">);</span>
+<span class="lineno"> 7</span> <span class="c1">#definiendo el dominio</span>
+<span class="lineno"> 8</span> <span class="nb">setcookie</span><span class="p">(</span><span class="s1">&#39;nombreCookie&#39;</span><span class="p">,</span><span class="s1">&#39;valor cookie&#39;</span><span class="p">,</span><span class="nb">time</span><span class="p">()</span><span class="o">+</span><span class="m">3600</span><span class="p">,</span><span class="s1">&#39;/ruta/&#39;</span><span class="p">,</span><span class="s1">&#39;dominio.com&#39;</span><span class="p">);</span>
+<span class="lineno"> 9</span> <span class="c1">#definiendo el campo seguro</span>
+<span class="lineno">10</span> <span class="nb">setcookie</span><span class="p">(</span><span class="s1">&#39;nombreCookie&#39;</span><span class="p">,</span><span class="s1">&#39;valor cookie&#39;</span><span class="p">,</span><span class="nb">time</span><span class="p">()</span><span class="o">+</span><span class="m">3600</span><span class="p">,</span><span class="s1">&#39;/ruta/&#39;</span><span class="p">,</span><span class="s1">&#39;dominio.com&#39;</span><span class="p">,</span><span class="k">true</span><span class="p">);</span>
+<span class="lineno">11</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<h2>Acceso a las cookies.</h2>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?</span>
+<span class="lineno">2</span>     <span class="k">echo</span> <span class="nv">$_COOKIE</span><span class="p">[</span><span class="s1">&#39;nombreCookie&#39;</span><span class="p">];</span>
+<span class="lineno">3</span>     <span class="nb">print_r</span><span class="p">(</span><span class="nv">$_COOKIE</span><span class="p">);</span>
+<span class="lineno">4</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/07-programacion-web.md">07-programacion-web.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/4
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: 07-programacion-web.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Sessiones</h1></header>
+            
+            
+            <section><h1>iniciando</h1>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?</span>
+<span class="lineno">2</span>     <span class="nx">session_star</span><span class="p">();</span>
+<span class="lineno">3</span>     <span class="nb">session_register</span><span class="p">(</span><span class="s1">&#39;v1&#39;</span><span class="p">,</span><span class="s1">&#39;v2&#39;</span><span class="p">,</span><span class="s1">&#39;v3&#39;</span><span class="p">);</span>
+<span class="lineno">4</span>     <span class="k">echo</span> <span class="nb">session_id</span><span class="p">();</span>
+<span class="lineno">5</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+<h1>visualizando</h1>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="cp">&lt;?</span>
+<span class="lineno">2</span>     <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;v1&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;valor&#39;</span><span class="p">;</span>
+<span class="lineno">3</span>     <span class="nb">print_r</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">);</span>
+<span class="lineno">4</span>     <span class="k">if</span><span class="p">(</span> <span class="nb">session_is_registered</span><span class="p">(</span><span class="s1">&#39;variable&#39;</span><span class="p">)</span> <span class="p">){</span>
+<span class="lineno">5</span>         <span class="nb">session_regenerate_id</span><span class="p">();</span>
+<span class="lineno">6</span>         <span class="nb">header</span><span class="p">(</span><span class="s1">&#39;location: index.php&#39;</span><span class="p">);</span>
+<span class="lineno">7</span>     <span class="p">}</span>
+<span class="lineno">8</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/07-programacion-web.md">07-programacion-web.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/4
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Tabla de Contenidos</h2>
+    <table>
+      <caption>Tabla de Contenidos</caption>
+            
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Programación en la web.</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+            
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Cabeceras http</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+            
+      <tr id="toc-row-3">
+        <th><a href="#slide3">Cookies</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+            
+      <tr id="toc-row-4">
+        <th><a href="#slide4">Sessiones</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Ayuda</h2>
+    <table>
+      <caption>Ayuda</caption>
+      <tr>
+        <th>Tabla de Contenidos</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Vista Minuatura</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Archivo fuente</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Ver num. Página</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Notas</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Ayuda</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>

@@ -1,57 +1,61 @@
 Temario PHP
 ========================
 
-## Conociendo **PHP**.
- - Comando del sistema operativo(orientado a linux).
- - Caracteres especiales.
+##01. Conociendo **PHP**.
+ - introducción a PHP.
+ - Instalación de PHP.
+ - Comandos del sistema operativo.
+ - Etiquetas limitadoras.
  - Tipos de datos.
- - Funciones y variables basicas.
- - Constantes
- - Mostrando valores en la pagina.
- - Gestión de errores.
+ - Funciones y variables básicas.
+ - Constantes.
+ - Mostrando valores en la página.
+ - Depuración y Gestión de errores.
  
-##  Estructuras de Control
+##02.  Estructuras de Control
  - Condicionales.
  - Ciclos de control.
- 
-## Areglos y matrices.
- - Creación de matrices.
- - Ordenamiento y apilamiento.
- - Manejo de matrices.
 
-## Funciones de usuario
+##03. Areglos.
+ - Creación de arreglos.
+ - Ordenamiento.
+ - Comportamiento pila, lista.
+ - Manejo de arreglos.
+
+##04. Funciones de usuario
  - Ambito de variables.
  - Paso de argumentos.
 
-## Manejo de cadenas.
+##05. Manejo de cadenas.
  - Tratamiento básico.
  - Mascaras.
  - Formateo.
  - Expresiones regulares.
 
-## Funciones Matematicas.
+##06. Funciones Matematicas.
  - Operaciones a nivel de bits.
  - Libreria BCmath.
 
-## Programación en la web.
+##07. Programación en la web.
  - Formularios.
  - Cabeceras http.
  - Cookies.
  - Sesiones.
 
-## Programacion orientada a objetos.
- - Funciones magicas.
+##08. Programación orientada a objetos.
+ - Funciones mágicas.
  - Clases abstractas.
  - Excepciones.
  - Refleciones
 
-## Bases  de datos y Recursos de datos
+##09. Bases  de datos y Recursos de datos
  - Lenguaje SQL
  - Extensión PDO
  - XML y Xpath
 
-## Patrones.
+##10. Patrones.
  - Singleton.
  - Registry.
  - Factory.
  - MVC
+

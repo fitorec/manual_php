@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>ConociendoPHP</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///usr/local/lib/python2.6/dist-packages/landslide-0.8.2-py2.6.egg/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///usr/local/lib/python2.6/dist-packages/landslide-0.8.2-py2.6.egg/landslide/themes/default/css/screen.css">
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///usr/local/lib/python2.6/dist-packages/landslide-0.8.2-py2.6.egg/landslide/themes/default/js/slides.js"></script>
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div class="presentation">
+    <div class="slides">
+      
+      <!-- slide source: 01.conociendo.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>ConociendoPHP</h1></header>
+            
+            
+            <section><h2>Comandos del sistema operativo(orientado a linux):</h2>
+<p><code>sh
+    php -r 'phpinfo();'
+    php -r 'print_r($_SERVER);'</code></p>
+<h2>Caracteres especiales.</h2>
+<p><code>php
+&lt;?php
+    #esto es un comentario
+    //esto tambien es un comentario
+    /* este es un comentario...
+    * multilinea
+    */
+?&gt;</code></p>
+<h2>Tipos de datos.</h2>
+<h3>Datos simples.</h3>
+<ul>
+<li><strong>int</strong>   - Númerico con signo.</li>
+<li><strong>float</strong> - Númerico fraccionario con signo.</li>
+<li><strong>string</strong>- Secuencia de caracteres.</li>
+<li><strong>boolean</strong>-Un valor tipo binario <em>true/false</em>.</li>
+</ul>
+<h3>Datos compuestos.</h3>
+<ul>
+<li><strong>Matrices:</strong></li>
+<li><strong>Objetos:</strong>
+<code>php
+&lt;?php
+    echo gettype( $variable );
+?&gt;</code></li>
+</ul>
+<h2>Funciones y variables básicas.</h2>
+<h2>Constantes</h2>
+<p><code>php
+&lt;?php
+    define( 'COSTANTE', 5 );
+    define( 'COSTANTE2', "valor de mis constante" , true );
+    echo COSTANTE;
+    echo Costante2;
+?&gt;</code>
+Link: <a href="http://php.net/manual/es/function.define.php">http://php.net/manual/es/function.define.php</a></p>
+<h2>Mostrando valores en la página.</h2>
+<h2>Gestión de errores.</h2></section>
+            
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///home/fitorec/Escritorio/taller_php/manual_php/wiki/01.conociendo.md">01.conociendo.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/1
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Tabla de Contenidos</h2>
+    <table>
+      <caption>Tabla de Contenidos</caption>
+            
+      <tr id="toc-row-1">
+        <th><a href="#slide1">ConociendoPHP</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Ayuda</h2>
+    <table>
+      <caption>Ayuda</caption>
+      <tr>
+        <th>Tabla de Contenidos</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Vista Minuatura</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Archivo fuente</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Ver num. Página</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Notas</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Ayuda</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
